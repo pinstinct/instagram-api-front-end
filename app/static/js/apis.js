@@ -49,3 +49,20 @@ function obtainAuthToken(username, password) {
   .fail(function(data){
   });
 }
+
+
+function postCreate() {
+  var url = 'http://localhost:8000/api/post/';
+  var token = 'Token ' + getCookie('instagramToken');
+  console.log(token);
+  $.ajax({
+    url: url,
+    method: 'POST',
+    headers: {
+      Authorization: token,
+    }
+  })
+  .done(function(data){
+    console.log(data);
+  });
+}
