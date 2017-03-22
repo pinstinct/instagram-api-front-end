@@ -43,7 +43,8 @@ function obtainAuthToken(username, password) {
   })
   .done(function(data){
     var token = data.token;
-    console.log(token)
+    // console.log(token)
+    setCookie('instagramToken', token);
   })
   .fail(function(data){
   });
