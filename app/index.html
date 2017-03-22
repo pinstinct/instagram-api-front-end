@@ -33,6 +33,7 @@
            </nav>
        </header>
        <div class="content-container">
+
        </div>
 
        <button id="load-post-list">Load PostList</button>
@@ -65,11 +66,16 @@
            // 매 loop마다 result[i]의 값을 curPost 변수에 할당
            var curPost = data.results[i];
            console.log(curPost.pk);
+
+           // curPost 값을 사용해서 div.content-container에
+           // jQuery의 append 메서드를 사용해 새 HTML 요소를 동적으로 생성
+           $('.content-container').append('<div>' + curPost.pk + '</div>')
          }
        })
        .fail(function(data) {
          console.log('fail');
          console.log(data);
+         $('.content-container').append('<div>Fail</div>')
        });
     }
     </script>
