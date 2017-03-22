@@ -1,0 +1,22 @@
+{
+  "name": "jquery-ajax",
+  "authors": [
+    "LimHM <gusals3407@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "swiper": "^3.4.2",
+    "moment": "^2.18.1"
+  }
+}
