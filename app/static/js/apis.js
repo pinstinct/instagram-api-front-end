@@ -30,3 +30,21 @@ function loadPostList() {
      $('.contentt-container').append('<div>Fail</div>')
    });
 }
+
+function obtainAuthToken(username, password) {
+  url = 'http://localhost:8000/api/member/token-auth/';
+  $.ajax({
+    url: url,
+    method: 'POST',
+    data: {
+      username: username,
+      password: password,
+    }
+  })
+  .done(function(data){
+    var token = data.token;
+    console.log(token)
+  })
+  .fail(function(data){
+  });
+}
