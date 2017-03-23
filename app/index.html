@@ -31,6 +31,7 @@
                    <a href="" class="btn-header-nav sprite-profile"></a>
                </span>
            </nav>
+           <button class="post-photo" type="submit">photo</button>
        </header>
        <div class="content-container">
          <div class="post-list-container">
@@ -49,11 +50,24 @@
     <script src="static/js/apis.js"></script>
 
     <script>
-    $('#load-post-list').click(function(){
-      loadPostList();
-    });
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+          loadPostList();
+        }
+      });
+    })
+
+    // $('#load-post-list').click(function(){
+    //   loadPostList();
+    // });
+    loadPostList();
     obtainAuthToken('hm', '7890uiop');
-    postCreate();
+    // postCreate();
+
+    $('.post-photo').click(function(){
+        alert('Test');
+      });
     </script>
 </body>
 </html>
